@@ -11,32 +11,16 @@ A simple Python program that demonstrates how to store and display student infor
 
 ## Installation
 
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-```
-
-2. Navigate to the project directory:
-
-```bash
-cd <repository-directory>
-```
+Clone or download the repository to your local machine.
 
 ## Requirements
 
-* Python 3.x
+* Python
 * No external libraries are required.
 
 ## Usage
 
-Run the program using:
-
-```bash
-python dictionary.py
-```
-
-The program creates a dictionary containing the student's details and displays them in the console.
+Run the `dictionary.py` Python program to display the stored student details.
 
 ## Example
 
