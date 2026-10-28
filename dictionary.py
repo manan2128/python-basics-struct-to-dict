@@ -9,13 +9,27 @@ Original file is located at
 struct to dictionary
 """
 
-student = {
-    "Name": "Harsh",
-    "Roll": 10,
-    "Marks": 90.99
-}
+from dataclasses import asdict, dataclass
 
-print("Student Details:")
-print(f"Name  : {student['Name']}")
-print(f"Roll  : {student['Roll']}")
-print(f"Marks : {student['Marks']}")
+
+@dataclass
+class Student:
+    """A structure with named, typed fields (sample data, not real grades)."""
+
+    name: str
+    roll: int
+    marks: float
+
+
+def student_to_dict(student: Student) -> dict:
+    """Convert a Student record into a separate dictionary."""
+    return asdict(student)
+
+
+if __name__ == "__main__":
+    record = Student(name="Example Student", roll=10, marks=90.99)
+    student = student_to_dict(record)
+    print("Student Details:")
+    print(f"Name  : {student['name']}")
+    print(f"Roll  : {student['roll']}")
+    print(f"Marks : {student['marks']}")

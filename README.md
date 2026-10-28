@@ -1,47 +1,34 @@
-# Student Details Using Python Dictionary
+# Student structure to dictionary
 
-A simple Python program that demonstrates how to store and display student information using a Python dictionary. The program stores a student's name, roll number, and marks, then displays the details in a clear format.
+This Python exercise converts a structured student record into a dictionary, then displays its fields.
 
-## Features
+## How it works
 
-* Stores student details using a Python dictionary.
-* Stores the student's name, roll number, and marks.
-* Displays the stored student information.
-* Uses formatted output for better readability.
+`Student` is a standard-library dataclass with `name`, `roll`, and `marks` fields. `student_to_dict()` calls `dataclasses.asdict()` to convert that record to a separate dictionary. The sample grades and roll number are fictional.
 
-## Installation
+## Run
 
-Clone or download the repository to your local machine.
+Requires Python 3.7 or newer; no external packages.
 
-## Requirements
-
-* Python
-* No external libraries are required.
-
-## Usage
-
-Run the `dictionary.py` Python program to display the stored student details.
-
-## Example
-
-The program stores the following information:
-
-```python
-student = {
-    "Name": "Harsh",
-    "Roll": 10,
-    "Marks": 90.99
-}
+```sh
+python dictionary.py
+python -m unittest -v
 ```
 
 Example output:
 
 ```text
 Student Details:
-Name  : Harsh
+Name  : Example Student
 Roll  : 10
 Marks : 90.99
 ```
+
+The tests verify field conversion and that editing the returned dictionary does not change the original record.
+
+## Project history
+
+The original shared coursework stored a dictionary directly. The October 2026 update adds actual dataclass-to-dictionary conversion and tests with AI assistance. Original Git history and the Colab reference in the source are preserved.
 
 ## License
 
